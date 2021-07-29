@@ -19,7 +19,8 @@ def change_name(root, name, new_name):
 
 def fix_filenames():
     counter = 0
-    current_dir = os.getcwd()
+    # current_dir = os.getcwd()
+    current_dir = os.path.dirname(os.path.realpath(__file__))
 
     for root, dirs, files in os.walk(current_dir):
         dirs_and_files = dirs + files
